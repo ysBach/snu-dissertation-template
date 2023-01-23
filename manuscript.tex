@@ -1,5 +1,12 @@
-\documentclass[11pt]{report}
-\usepackage[paperwidth=19cm,paperheight=26cm,left=3cm,right=3cm,top=3.5cm,bottom=1.5cm]{geometry}
+%%%%%%%%%%%%%%%%%%%%[Free to change]%%%%%%%%%%%%%%%%%%%%
+% As of 2021 Feb, SNU students no longer need to submit printed dissertation, and only the digital version of it. Therefore, even the library says it has no strict rule for page size, margin size, fonts and font sizes. They merely mentioned "basically follow the template". Thus, I understand all parameters (or any code lines) within this %%%%[Free to change]%%%% block are free to be tuned by the student to any degree, unless it severely harms readability.
+
+% """현재 저희가 제공하고 있는 작성 요령 및 내용 구성 등은 기본적으로 따르되, 많이 문의해주시는 논문의 규격(본문 크기, 여백 등), 서체(활자 종류 및 크기)에 대해서는 엄격하게 규정해두고 있지 않은 점 알려드립니다."""  - email by libit@snu.ac.kr on 2022-12-05 to ysBach.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{report}
+\usepackage[paperwidth=21cm,paperheight=29.7cm,left=2cm,right=2cm,top=3.5cm,bottom=1.5cm]{geometry}
+% Originally this was \usepackage[paperwidth=19cm,paperheight=26cm,left=3cm,right=3cm,top=3.5cm,bottom=1.5cm]{geometry}
 \addtolength{\voffset}{-1.5cm}
 \renewcommand{\baselinestretch}{1.7}
 \renewcommand{\abstractname}{\large Abstract}
@@ -19,34 +26,60 @@
 \input{title}
 \end{titlepage}
 
+%%%%%%%%%%%%%%%%%%%%[Free to change]%%%%%%%%%%%%%%%%%%%%
+
+\setstretch{1.15}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{abstract}\addcontentsline{toc}{chapter}{Abstract}\setcounter{page}{3}
-abstract contents abstract contents abstract contents
+abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents 
+
+abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents
+
+abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents 
+
+abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents abstract contents 
 \end{abstract}\setcounter{page}{5}
 
 {
-\setstretch{1.45}
+\setstretch{1.}
 \tableofcontents
 \listoffigures\addcontentsline{toc}{chapter}{List of Figures}
 \listoftables\addcontentsline{toc}{chapter}{List of Tables}
 }
 
 \chapter{Introduction}\label{c:intro}\pagenumbering{arabic}
+\input{chaps/intro}
 
-\section{Deep neural networks}
+\chapter{Thermophysical Modeling}\label{c:tpm}
+\input{chaps/tpm}
 
-\cite{Gatys15,Noh15,Weston15}
 
-\chapter{Background}\label{c:background}
+\chapter{Polarimetry}\label{c:pol}
+\input{chaps/pol}
 
-\section{Basic operations for deep networks}
+\chapter{Summary and Future Works}
+summary 
 
-\chapter{Conclusion}\label{c:con}
+Future works
 
-\section{Dissertation summary}
-
-\section{Future work}
 
 \bibliographystyle{plain}
-\bibliography{bib/background}\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{references.bib}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+
+\chapter*{초록}\addcontentsline{toc}{chapter}{Abstract}\setcounter{page}{3}
+한국어 초록이 반드시 포함되어야 함 (For the dissertation written in non-Korean language, Korean abstract MUST be included)
+
+
+
+\chapter*{Acknowledgement}
+Acknowldegements go here
+
 
 \end{document} 

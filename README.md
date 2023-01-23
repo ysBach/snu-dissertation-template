@@ -1,9 +1,8 @@
 # SNU-Dissertation-Template
 
-LaTeX Template for Dissertation at Seoul National University.
+> This repo is a fork from [@taehoonlee's repo](https://github.com/taehoonlee/snu-dissertation-template).
 
-### Contents
+Why does this school (SNU) have no official latex template...?? I am surprised virtually all PhD-level students in the branches of sciences/engineering are spending huge amount of times to find proper templates for them twice a year. What a waste of precious human resources.
 
-- [Template](manuscript.pdf)
-- [Paper](http://snu-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/display.do?tabs=viewOnlineTab&doc=82SNU_INST21557911060002591)
-- [Slides](https://www.slideshare.net/taehoonlee86/phd-defense-slides-75959910)
+I also do not want to spend too much time on genalizing the template, as there's no reasons to make a general "unofficial" template. The best way is library publishes the official template...
+

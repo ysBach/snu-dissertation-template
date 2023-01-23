@@ -7,6 +7,7 @@
 \documentclass[12pt]{report}
 \usepackage[paperwidth=21cm,paperheight=29.7cm,left=2cm,right=2cm,top=3.5cm,bottom=1.5cm]{geometry}
 % Originally this was \usepackage[paperwidth=19cm,paperheight=26cm,left=3cm,right=3cm,top=3.5cm,bottom=1.5cm]{geometry}
+
 \addtolength{\voffset}{-1.5cm}
 \renewcommand{\baselinestretch}{1.7}
 \renewcommand{\abstractname}{\large Abstract}
@@ -15,8 +16,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{kotex}
+\usepackage[round]{natbib}
 
-\usepackage{natbib}
+%\usepackage{hyperref}
 
 \begin{document}
 
@@ -63,12 +65,10 @@ abstract contents abstract contents abstract contents abstract contents abstract
 \input{chaps/pol}
 
 \chapter{Summary and Future Works}
-summary 
+\input{chaps/sum}
 
-Future works
-
-
-\bibliographystyle{plain}
+\clearpage
+\bibliographystyle{plainnat}
 \bibliography{references.bib}
 \addcontentsline{toc}{chapter}{Bibliography}
 

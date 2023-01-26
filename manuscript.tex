@@ -30,7 +30,7 @@
 
 %%%%%%%%%%%%%%%%%%%%[Free to change]%%%%%%%%%%%%%%%%%%%%
 
-\setstretch{1.15}
+\setstretch{1.2}   % 1.2 is good because (1) it is not too large, but (2) large enough that a simple inline fraction ($\frac{num}{den}$) is well displayed.
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0.5em}
 
@@ -71,13 +71,23 @@ abstract contents abstract contents abstract contents abstract contents abstract
 
 
 \chapter{Polarimetry}\label{c:pol}
-\input{chaps/pol}
+\input{chaps/pol} 
 
 \chapter{Summary and Future Works}
 \input{chaps/sum}
 
+This is how you put references:
+
+\cite{1929PhDT.........9L,1970GeCAS...1.2127G,1986MNRAS.218...75G}
+
+Inside the paretheses: \citep{2022_SAG_NICpolpy}
+
+And with prefix/suffix: \citep[prefix!][suffix!]{2018AJ....156..123A}
+
+
+
 \clearpage
-\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
 \bibliography{references.bib}
 \addcontentsline{toc}{chapter}{Bibliography}
 

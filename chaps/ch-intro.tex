@@ -1,0 +1,30 @@
+This is the introduction. For \texttt{itemize} or \texttt{enumerate}, you may tune the separations:
+\begin{itemize}
+\item This is the original itemize. Enumerate should look similar, but with numbers for \texttt{$\backslash$item}.
+\item This is a long item to show how it will look like. This is a long item to show how it will look like. This is a long item to show how it will look like.
+\item Short item.
+\item Short item.
+\item Short item.
+\end{itemize}
+
+You may add something like \texttt{[itemsep=-5pt, topsep=0pt, partopsep=0pt]} to make it tighter:
+\begin{itemize}[itemsep=-5pt, topsep=0pt, partopsep=0pt]
+\item This is the original itemize. Enumerate should look similar, but with numbers for \texttt{$\backslash$item}.
+\item This is a long item to show how it will look like. This is a long item to show how it will look like. This is a long item to show how it will look like.
+\item Short item.
+\item Short item.
+\item Short item.
+\end{itemize}
+
+In this thesis, the preamble includes
+\begin{itemize}[itemsep=-5pt, topsep=0pt, partopsep=0pt]
+\item Font STIX: ``\texttt{usepackage[notextcomp]\{stix\}}''
+\item natbib: ``\texttt{usepackage[round,semicolon,authoryear]\{natbib]\}}''
+\item Small caption: ``\texttt{usepackage[font=small]\{caption\}}''
+\item Some useful packages: siunitx, physics, rotating (The package to rotate table by sidewaystable), csquotes (for ``displayquote'' environment), listings
+\item Then a preamble for URLed A\&A bibliography (see \Cref{ss:ref style}).
+\item Then a preamble for cleveref (see \Cref{ss:cref}).
+\item Then a preamble for List of Figures \& List of Tables.
+\item Then a preamble for the first language abstract.
+\item Then a preamble for the page numbering, page margin, \texttt{setlength}, etc, as well as MACROs.
+\end{itemize}

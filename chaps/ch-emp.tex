@@ -1,0 +1,54 @@
+The reference in a PhD thesis can easily go beyond 100 items. The management will be tricky if you do not plan beforehand.
+
+\section{Reference}
+\subsection{ADS}
+For astronomers, NASA provides a handy tool called ADS\footnote{\url{https://ui.adsabs.harvard.edu/}}, and its functionality, called ``Library'', is fantastic (though still in need of improvement). To use it efficiently, I have written a simple script called ``\texttt{ads2bibtex}''\footnote{\url{https://github.com/ysBach/ads2bibtex}}.
+
+
+\subsection{Reference Style}\label{ss:ref style}
+The reference style is nothing more than personal taste. Here I used the ``URL-ed A\&A style''\footnote{\url{https://github.com/yangcht/AA-bibstyle-with-hyperlink}}'' specified in the ``\texttt{aa\_url.bst}'' file. The \textcolor{magenta}{magenta link} redirects to the URL (usually DOI), and \textcolor{blue}{blue link} redirects to the ADS URL.
+\textcolor{red}{I tweaked it a bit so that the bibliography shows the title of the publication in double quotes}.
+
+\textbf{IMPORTANT NOTE}: As of 2023-05-18, at least \texttt{@PHDTHESIS} must have \texttt{adsurl=\{\}} and \texttt{adsnote=\{\}} if they are not registered with ADS. If you don't have these fields, you will get the following error:
+
+  \texttt{Extra \}, or forgotten $\backslash$endgroup.}
+
+
+\subsection{\texttt{cite}}\label{ss:cite}
+You may already be familiar with citation. For your information:
+\begin{itemize}[itemsep=-5pt, topsep=0pt, partopsep=0pt]
+\item \texttt{cite} makes \cite{2021A&A...654A.113B}. If two arguments, \cite{2021A&A...654A.113B,2022MNRAS.509.4128I}.
+\item \texttt{citet} makes \citet{2021A&A...654A.113B}. If two arguments, \citet{2021A&A...654A.113B,2022MNRAS.509.4128I}.
+\item \texttt{citep} makes \citep{2021A&A...654A.113B}. If two arguments, \citep{2021A&A...654A.113B,2022MNRAS.509.4128I}.
+\item \texttt{citealt} makes \citealt{2021A&A...654A.113B}. If two arguments, \citealt{2021A&A...654A.113B,2022MNRAS.509.4128I}.
+\end{itemize}
+With optional arguments, ``\texttt{$\backslash$citep[See, for example,][Figure 1]\{2021A\&A...654A.113B\}}'' becomes: \citep[See, e.g.,][Figure 1]{2021A&A...654A.113B}.
+
+
+\section{\texttt{Cref}}\label{ss:cref}
+\texttt{Cleveref} package provides multiple options for simple referencing. Please refer to the original documentation\footnote{\url{https://ctan.org/pkg/cleveref?lang=en}}.
+
+\section{Code}
+In this thesis, you can use \texttt{lstlisting} environment:
+
+\begin{lstlisting}
+# import nicpolpy package
+import nicpolpy as nic
+
+# Do not print useless warnings
+import warnings
+from astropy.utils.exceptions import AstropyWarning
+warnings.filterwarnings('ignore',
+    append=True, category=AstropyWarning)
+
+# Cell 0: Initialize the reducer
+npr = nic.NICPolReduc(
+    name="SP_20190417",
+    inputs="_original_32bit/190417/raw/*.fits",
+    mflats="cal-flat_20180507-lv1/*.fits",
+    imasks="masks/*.fits",
+    verbose=1
+)
+\end{lstlisting}
+
+You may modify the preference settings at the preamble in the ``\texttt{manuscript.tex}'' file.

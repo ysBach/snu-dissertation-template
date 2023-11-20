@@ -2,6 +2,7 @@
 
 > This repo is a fork from [@taehoonlee's repo](https://github.com/taehoonlee/snu-dissertation-template).
 
+**NEWS**: The template is also available as [overleaf template](https://www.overleaf.com/latex/templates/seoul-national-university-dissertation-template/gszjrgwjqmbx) !!
 
 **IMPORTANT NOTE**: ``kotex`` crashes (known bug) with TeX live version 2022, so please use 2021 or 2023+.
 

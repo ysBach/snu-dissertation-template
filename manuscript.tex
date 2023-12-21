@@ -1,6 +1,11 @@
-%%%%%%%%%%%%%%%%%%%%[Free to change]%%%%%%%%%%%%%%%%%%%%
-% Starting from February 2021, SNU students are no longer required to submit a printed dissertation; only a digital version is necessary. Consequently, the library no longer enforces strict rules for page size, margin size, fonts, and font sizes. Their guidance is to "basically follow the template." Therefore, all parameters (including code lines) within this %%%%[Free to change]%%%% block can be adjusted by the student as desired, as long as it doesn't significantly compromise readability.
-
+%%%%%%%%%%%%%%%%%%%%%%%[Comments]%%%%%%%%%%%%%%%%%%%%%%%
+% Starting from February 2021, SNU students are no longer required to submit a printed dissertation; only a digital version is necessary. Consequently, the library no longer enforces strict rules for page size, margin size, fonts, and font sizes. Their guidance is to "basically follow the template."
+%
+% Therefore, most parts in this document are free to be changed, especially within the %%%%[Free to change]%%%% block, as long as it doesn't significantly compromise readability.
+%
+% ******* If you want the true bare-bone structure, go to ********
+% https://github.com/taehoonlee/snu-dissertation-template
+%
 % """중앙도서관에서 LaTex 양식은 별도로 제공하고 있지 않으며, word / 한글 양식만 제공하고 있는 점 양해 부탁드립니다. [...] 현재 저희가 제공하고 있는 작성 요령 및 내용 구성 등은 기본적으로 따르되, 많이 문의해주시는 논문의 규격(본문 크기, 여백 등), 서체(활자 종류 및 크기)에 대해서는 엄격하게 규정해두고 있지 않은 점 알려드립니다."""  - email by libit@snu.ac.kr on 2022-12-05 to ysBach.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -21,6 +26,8 @@
 \usepackage{textcomp}
 \usepackage{kotex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference style settings
 % ↓ This is also free to change. Do as you wish...
 \usepackage[
   round,
@@ -31,6 +38,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%
+% Page numbering style settings
 % For proper page numbering at TOC part https://tex.stackexchange.com/questions/235866/page-number-resets-on-table-of-contents
 \makeatletter
 \renewenvironment{abstract}{%
@@ -332,7 +340,7 @@ Please be aware that regulations may change in the future. It is your responsibi
 \textbf{Keywords}: Asteroids, Regolith, Thermal modeling, Radiation Pressure, Polarimetry---Optical, Polarimetry---Infrared
 
 ~\\
-\noindent \textbf{\textit{Student Number}}: 2016-20329
+\noindent \textbf{\textit{Student Number}}: 2000-12345
 
 \end{abstract}
 
@@ -389,21 +397,16 @@ Please be aware that regulations may change in the future. It is your responsibi
 ~ \\ ~ \\ ~ \\
 \begin{center}
 \textbf{\textit{
-To humanity and the giants
-%who never faltered in their contemplation of the world, \\
-%enduring the trials to uphold their conscientious attitude \\
-%towards building scientific knowledge.
+Dedication goes here
 }}
 \end{center}
 
 \mbox{}
 \vfill
-{\noindent Science knows no country, \\ because knowledge belongs to humanity, \\ and is the torch which illuminates the world.}
+{Other dedication if you want}
 
 {\footnotesize
-%\noindent Science is the highest personification of the nation
-%\\ \noindent because that nation will remain the first
-%\\ \noindent which carries the furthest the works of thought and intelligence.
+Free to add more here?
 }
 
 \hfill ---\textit{Louis Pasteur}
@@ -426,13 +429,6 @@ To humanity and the giants
 \chapquote{He integrates empirically.}{Albert Einstein, {\footnotesize after saying ``God does not care about our mathematical difficulties.''}}
 \input{chaps/ch-emp}
 
-
-\part{Journal Publications}\label{part-publications}
-\chapter[Thermal Modeling of Comet-Like Objects from AKARI Observation]{Thermal Modeling of Comet-Like Objects from AKARI Observation\footnote{A version of this chapter has been published as \textbf{Bach, Y. P., Ishiguro, M., \& Usui, F. (2017) \textit{The Astronomical Journal}, 154, 202} \citep{2017AJ....154..202B}.}}\label{c:akari}
-\input{chaps/paper1}
-
-\chapter[Near Infrared Polarimetry of Airless Bodies Hints the Existence of Fine Dusts: The Case of Dawn Mission Targets, (4) Vesta and (1) Ceres]{Near Infrared Polarimetry of Airless Bodies Hints the Existence of Fine Dusts: The Case of Dawn Mission Targets, (4) Vesta and (1) Ceres\footnote{This work is currently ongoing and has not yet undergone peer review. A version of this chapter will be submitted to an academic journal in the near future, \textbf{Bach, Y. P., Ishiguro, M. \& Takahashi, J., et al. (2023), in prep. (to be submitted in mid to late 2023)}}}\label{c:nirpol}
-\input{chaps/paper2}
 
 \part{Concluding Remarks}\label{part-conclusion}
 \chapter{Summary and Future Works}\label{c:summary}
@@ -468,7 +464,7 @@ To humanity and the giants
 \textbf{주\,요\,어}: 소행성, 열적 모델링, 표토, 복사압, 편광---광학, 편광---적외선
 
 ~\\
-\noindent \textbf{학 \quad 번}: 2016-20329
+\noindent \textbf{학 \quad 번}: 2000-12345
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
